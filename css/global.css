@@ -10,19 +10,9 @@ header, section, footer {
 }
 
 #header {
-	width: auto;
-	min-height: 10em;
-	height: auto;
-}
-
-#header {
-	width: auto;
-	height: auto;
 	padding: 4em;
 }
 
 #footer {
-	width: auto;
-	height: auto;
 	padding: 2em;
 }
