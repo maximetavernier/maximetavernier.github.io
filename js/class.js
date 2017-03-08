@@ -2,7 +2,7 @@ class Footer extends React.Component {
 	render() {
 		return (
 			<footer>
-				<div>Hello world !</div>
+				<p>This website is powered by React.</p>
 			</footer>
 		);
 	}
