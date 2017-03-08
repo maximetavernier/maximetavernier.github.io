@@ -20,11 +20,14 @@
 		<script src="/js/jquery-1.12.4.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
 		<script src="/js/class.js"></script>
-		<script type="text/babel" src="/js/global.js"></script>
 	</head>
 	<body>
-		<div id="root">
-
-		</div>
+		<div id="root"></div>
+		<script type="text/babel">
+			ReactDOM.render(
+				<Footer />,
+				document.getElementById('root')
+			);
+		</script>
 	</body>
 </html>
