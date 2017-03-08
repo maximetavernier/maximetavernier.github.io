@@ -21,9 +21,7 @@
 		class Footer extends React.Component {
 			render() {
 				return (
-					<footer>
-						<p>This website is powered by React.</p>
-					</footer>
+					<p>This website is powered by React.</p>
 				);
 			}
 		}
@@ -32,11 +30,11 @@
 		<script src="/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<div id="root"></div>
+		<footer class="footer"></footer>
 		<script type="text/babel">
 			ReactDOM.render(
 				<Footer />,
-				document.getElementById('root')
+				$(".footer")
 			);
 		</script>
 	</body>
