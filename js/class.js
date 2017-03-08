@@ -1,12 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-class Footer extends React.Component {
-	render() {
+var Footer = React.createClass({
+	render: function() {
 		return (
-			<footer>
-				<p>This website is powered by React.</p>
-			</footer>
+			<p>This website is powered by React.</p>
 		);
 	}
-}
+});

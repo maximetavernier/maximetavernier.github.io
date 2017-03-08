@@ -17,24 +17,16 @@
 		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 		<script src="https://unpkg.com/react@latest/dist/react.js"></script>
 		<script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
-		<script type="text/babel">
-		class Footer extends React.Component {
-			render() {
-				return (
-					<p>This website is powered by React.</p>
-				);
-			}
-		}
-		</script>
+		<script src="/js/class.js"></script>
 		<script src="/js/jquery-1.12.4.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<footer class="footer"></footer>
+		<footer id="footer"></footer>
 		<script type="text/babel">
 			ReactDOM.render(
 				<Footer />,
-				document.getElementByClass('footer')
+				document.getElementById('footer')
 			);
 		</script>
 	</body>
