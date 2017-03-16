@@ -16,3 +16,23 @@ header, section, footer {
 #footer {
 	padding: 2em;
 }
+
+.react-button {
+	width: auto;
+	padding:0.5em;
+	margin:0;
+	background-color: #000;
+	border-radius:5px;
+	text-decoration: none;
+}
+
+.react-button a img {
+	width:12em;
+	height:12em;
+}
+
+.react-button a span {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}

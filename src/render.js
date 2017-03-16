@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import 'jQuery';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
