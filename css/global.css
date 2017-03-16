@@ -1,3 +1,12 @@
+/*
+ * Main colors :
+ * #6C4689
+ * #592D80
+ * #532A79
+ * #4E2772
+ * #49246B
+ */
+
 body {
 	margin:0;
 	padding:0;
@@ -9,19 +18,26 @@ header, section, footer {
 	margin-right:auto;
 }
 
-#header {
+header {
+	position: absolute;
 	padding: 4em;
+	width: 100%;
+	top: 0;
 }
 
-#footer {
+footer {
+	position: absolute;
+	width: 100%;
 	padding: 2em;
+	bottom: 0;
+	text-align:center;
 }
 
 .react-button {
 	width: auto;
 	padding:0.5em;
 	margin:0;
-	background-color: #000;
+	background-color: #49246B;
 	border-radius:5px;
 	text-decoration: none;
 }
@@ -35,4 +51,29 @@ header, section, footer {
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
+}
+
+div.maintenance-block {
+	position: fixed;
+	background: url("../assets/maintenance.png") no-repeat fixed center;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.maintenance-msg {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 14em;
+	font-size: 300%;
+	text-align: center;
+}
+
+img.fit {
+	max-width: 99%;
+	max-height: 99%;
 }

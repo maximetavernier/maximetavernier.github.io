@@ -4,23 +4,13 @@
 import React from 'react';
 
 export default class Button extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            img: this.props.img,
-            alt: this.props.alt,
-            title: this.props.title,
-            ref: this.props.ref
-        };
-    }
-
     render() {
         return (
             <div className="react-button">
-                <a href={this.state.ref}>
+                <a href={this.props.url}>
                     <ul>
-                        <li><img src={this.state.img} alt={this.state.alt} /></li>
-                        <li>{this.state.title}</li>
+                        <li><img src={this.props.image} alt={this.props.alt} /></li>
+                        <li>{this.props.title}</li>
                     </ul>
                 </a>
             </div>

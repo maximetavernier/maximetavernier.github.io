@@ -6,17 +6,24 @@
 		<title>Maxime Tavernier &ndash; &Agrave; propos</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		
 		<link rel="shortcut icon" href="/assets/favicon.png">
 
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
 		<link rel="stylesheet" href="/css/reset.css" />
 		<link rel="stylesheet" href="/css/global.css" />
+    <script>
+        window.location.replace("./maintenance");
+    </script>
 	</head>
 	<body>
-		<div id="header"></div>
-		<section id="content"></section>
-		<div id="footer"></div>
-    
-		<script src="dist/bundle.js"></script>
+		<header id="header"></header>
+		<section id="content">
+            <div id="portfolio"></div>
+            <div id="cv"></div>
+        </section>
+		<footer id="footer"></footer>
+
+		<script src="/dist/bundle.js"></script>
 	</body>
 </html>
