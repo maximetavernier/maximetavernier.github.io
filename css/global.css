@@ -1,57 +1,65 @@
 /*
- * Main colors :
- * #6C4689
- * #592D80
- * #532A79
- * #4E2772
- * #49246B
+ * Main colors : (http://flatcolors.net/palette/576-peter-river#)
+ * #ECF0F1
+ * #C2E0F4
+ * #85C1E9
+ * #3498DB
+ * #1A4C6D
+ * #050F15
+ */
+
+/**
+ * Global
  */
 
 body {
-	margin:0;
-	padding:0;
-	color:black;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	width: 100%;
+	height: 100%;
 }
 
 header, section, footer {
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 header {
-	position: absolute;
-	padding: 4em;
+	position: relative;
 	width: 100%;
 	top: 0;
+}
+
+section {
+	position: relative;
 }
 
 footer {
 	position: absolute;
 	width: 100%;
-	padding: 2em;
 	bottom: 0;
-	text-align:center;
 }
 
-.react-button {
-	width: auto;
-	padding:0.5em;
-	margin:0;
-	background-color: #49246B;
-	border-radius:5px;
-	text-decoration: none;
+img.fit {
+	max-width: 99%;
+	max-height: 99%;
 }
 
-.react-button a img {
-	width:12em;
-	height:12em;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
 }
 
-.react-button a span {
-	margin-left:auto;
-	margin-right:auto;
-	text-align: center;
-}
+/**
+ * Maintenance
+ */
 
 div.maintenance-block {
 	position: fixed;
@@ -71,9 +79,4 @@ div.maintenance-block {
 	top: 14em;
 	font-size: 300%;
 	text-align: center;
-}
-
-img.fit {
-	max-width: 99%;
-	max-height: 99%;
 }

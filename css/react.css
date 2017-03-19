@@ -1,0 +1,147 @@
+/**
+ * Navbar
+ */
+.navbar-toggler {
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    nav > .container {
+        width: 100%;
+    }
+}
+
+/**
+ * Header
+ */
+.react-header {
+    padding: 3em;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../assets/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.react-header h2 {
+    position: relative;
+    text-align: center;
+    font-size: 250%;
+    color: #050F15;
+    margin-bottom: 0;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+/**
+ * Footer
+ */
+.react-footer {
+    padding: 1em 0;
+    background-color: #ecf0f1;
+}
+
+.react-footer p.copyright {
+    font-size: small;
+    margin: 15px 0 0;
+}
+
+.react-footer p.powered {
+    font-size: small;
+    margin: 15px 0 0;
+}
+
+/**
+ * Section
+ */
+.react-section-leftside {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.react-section-rightside {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.react-section-heading {
+    margin-bottom: 30px;
+}
+
+.react-section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+/**
+ * Button
+ */
+.react-button {
+    display: inline-block;
+    padding: 0.3em;
+    margin: 0;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.react-button a {
+    position: relative;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    color: black;
+    margin-bottom: 1em;
+}
+
+.react-button a img {
+    width: 10em;
+    height: 10em;
+}
