@@ -1,17 +1,43 @@
 {
-  "title": "",
-  "subtitle": "",
-  "sections": [
+  "title": "Maxime Tavernier",
+  "subtitle": "Activity hub",
+  "menu": [
     {
-      "title": "about"
+      "id": "about",
+      "title": "About"
     },
     {
-      "title": "portfolio"
+      "id": "portfolio",
+      "title": "Portfolio"
     },
     {
-      "title": "CV"
+      "id": "activity",
+      "title": "Activity"
     }
   ],
-  "copyright": "",
-  "power": ""
+  "sections": [
+    {
+      "id": "about",
+      "title": "About",
+      "descr": "This page is currently on work...",
+      "image": "../assets/maintenance.png",
+      "url": "#"
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "descr": "This page is currently on work...",
+      "image": "../assets/maintenance.png",
+      "url": "#"
+    },
+    {
+      "id": "activity",
+      "title": "Activity",
+      "descr": "This page is currently on work...",
+      "image": "../assets/maintenance.png",
+      "url": "#"
+    }
+  ],
+  "copyright": "Copyright © 2017 - Maxime Tavernier. All Rights Reserved.",
+  "powered": "This website is powered by React."
 }

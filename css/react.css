@@ -1,13 +1,69 @@
 /**
  * Navbar
  */
-.navbar-toggler {
-    z-index: 1;
+.react-navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
 }
-
-@media (max-width: 576px) {
-    nav > .container {
-        width: 100%;
+.react-navbar .navbar-toggle {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+}
+.react-navbar .navbar-toggle:focus,
+.react-navbar .navbar-toggle:active {
+    outline: none;
+}
+.react-navbar .navbar-brand {
+    font-weight: 700;
+}
+.react-navbar .navbar-brand:focus {
+    outline: none;
+}
+.react-navbar a {
+    color: white;
+}
+.react-navbar .nav li a {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+.react-navbar .nav li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    background-color: transparent;
+}
+.react-navbar .nav li a:focus,
+.react-navbar .nav li a:active {
+    outline: none;
+    background-color: transparent;
+}
+.react-navbar .nav li.active {
+    outline: none;
+}
+.react-navbar .nav li.active a {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.react-navbar .nav li.active a:hover {
+    color: white;
+}
+@media (min-width: 768px) {
+    .react-navbar {
+        padding: 20px 0;
+        border-bottom: none;
+        letter-spacing: 1px;
+        background: transparent;
+        -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+    .react-navbar.top-nav-collapse {
+        padding: 0;
+        background: black;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
 }
 

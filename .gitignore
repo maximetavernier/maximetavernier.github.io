@@ -3,4 +3,4 @@
 .idea
 #dist/
 node_modules/
-src/index.js
+js/index.js

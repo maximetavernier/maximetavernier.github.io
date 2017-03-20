@@ -1,17 +1,43 @@
 {
-  "title": "",
-  "subtitle": "",
-  "sections": [
+  "title": "Maxime Tavernier",
+  "subtitle": "Mon réseau d'activité",
+  "menu": [
     {
-      "title": "about"
+      "id": "about",
+      "title": "À propos"
     },
     {
-      "title": "portfolio"
+      "id": "portfolio",
+      "title": "Portfolio"
     },
     {
-      "title": "CV"
+      "id": "activity",
+      "title": "Activité"
     }
   ],
-  "copyright": "",
-  "power": ""
+  "sections": [
+    {
+      "id": "about",
+      "title": "À propos",
+      "descr": "Cette page est actuellement en construction.",
+      "image": "../assets/maintenance.png",
+      "url": "#"
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "descr": "Cette page est actuellement en construction.",
+      "image": "../assets/maintenance.png",
+      "url": "#"
+    },
+    {
+      "id": "activity",
+      "title": "Activité",
+      "descr": "Cette page est actuellement en construction.",
+      "image": "../assets/maintenance.png",
+      "url": "#"
+    }
+  ],
+  "copyright": "Copyright © 2017 - Maxime Tavernier. Tout droits reservés.",
+  "powered": "Cette page fonctionne grâce à React."
 }

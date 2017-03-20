@@ -26,17 +26,16 @@ header, section, footer {
 }
 
 header {
-	position: relative;
+	/*position: relative;*/
 	width: 100%;
 	top: 0;
 }
 
 section {
-	position: relative;
+	width: 100%;
 }
 
 footer {
-	position: absolute;
 	width: 100%;
 	bottom: 0;
 }
