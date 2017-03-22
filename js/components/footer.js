@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Separator from './Footer/Separator';
+import Li from './Footer/Li';
+
 export default class Footer extends React.Component {
   render() {
     return (
@@ -8,18 +11,10 @@ export default class Footer extends React.Component {
                 <li className="list-inline-item">
                     <a href="#react-header">Home</a>
                 </li>
-                <li className="footer-menu-divider list-inline-item">&sdot;</li>
-                <li className="list-inline-item">
-                    <a href="#react-section-about">About</a>
-                </li>
-                <li className="footer-menu-divider list-inline-item">&sdot;</li>
-                <li className="list-inline-item">
-                    <a href="#react-section-portfolio">Portfolio</a>
-                </li>
-                <li className="footer-menu-divider list-inline-item">&sdot;</li>
-                <li className="list-inline-item">
-                    <a href="#react-section-activity">Activity</a>
-                </li>
+                <Separator/>
+                {this.props.data.map((item) =>
+                    <Li key={item.id} id={item.id} title={item.title} />
+                )}
             </ul>
             <p className="copyright text-muted small">
                 {this.props.copyright}

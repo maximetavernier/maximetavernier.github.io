@@ -19,22 +19,22 @@
     {
       "id": "about",
       "title": "À propos",
-      "descr": "Cette page est actuellement en construction.",
+      "descr": "Maxime Tavernier, 25 ans, jeune diplomé en ingénierie informatique, j'aime à dire que je suis un artiste. Non seulement artistiquement parlant, mais aussi professionnellement parlant. Créer est ma principale motivation, partager: un aboutissement.",
       "image": "../assets/maintenance.png",
       "url": "#"
     },
     {
       "id": "portfolio",
       "title": "Portfolio",
-      "descr": "Cette page est actuellement en construction.",
+      "descr": "Ingénieur en informatique, je me suis spécialisé dans le développement web et mobile. Je suis également amateur d'art et de sport en général. Pour plus d'informations, je vous invite à consulter mon portfolio. (Site en maintenance)",
       "image": "../assets/maintenance.png",
       "url": "#"
     },
     {
       "id": "activity",
       "title": "Activité",
-      "descr": "Cette page est actuellement en construction.",
-      "image": "../assets/maintenance.png",
+      "descr": "Passioné par le code, je développe toute sortes de projet, de manière professionnelle, mais également personnelle. Vous pouvez retrouvé ici la liste de mes projets, terminés ou en cours de développement. (Site en maintenance)",
+      "image": "../assets/tatav.io.png",
       "url": "#"
     }
   ],

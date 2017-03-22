@@ -19,21 +19,21 @@
     {
       "id": "about",
       "title": "About",
-      "descr": "This page is currently on work...",
+      "descr": "Maxime Tavernier, 25 years old, young graduate in computer engineering, I like to say that I am an artist. Not only artistically speaking, but also professionally speaking. Create is my main motivation, and share: a success.",
       "image": "../assets/maintenance.png",
       "url": "#"
     },
     {
       "id": "portfolio",
       "title": "Portfolio",
-      "descr": "This page is currently on work...",
+      "descr": "As a computer engineer, I specialize myself in web and mobile development. I am also an art and sport love, in general. For more informations, I invite you to consult my portfolio. (Site under maintenance)",
       "image": "../assets/maintenance.png",
       "url": "#"
     },
     {
       "id": "activity",
       "title": "Activity",
-      "descr": "This page is currently on work...",
+      "descr": "Code passionate, I develop all kind of project, professional, but also personal. You can find here the list of my completed and current projects. (Site under maintenance)",
       "image": "../assets/maintenance.png",
       "url": "#"
     }

@@ -8,23 +8,6 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Section from './components/Section';
-//import Maintenance from './components/Maintenance';
-
-$.get('../assets/' + (navigator.language || navigator.userLanguage) + '.json', function(json) {
-    var data = $.parseJSON(json);
-    var left = true;
-
-    ReactDOM.render(<Navbar />, document.getElementById('react-navbar'));
-    ReactDOM.render(<Header title={data.title} subtitle={data.subtitle} />, document.getElementById('react-header'));
-
-    $(data.sections).each(function(i, val) {
-        ReactDOM.render(<Section side={left ? "left" : "right"} title={val.title} descr={val.descr} image={val.image} url={val.url} />, document.getElementById('react-section-' + val.id));
-        left = !left;
-    });
-
-    ReactDOM.render(<Footer copyright={data.copyright} powered={data.powered} />, document.getElementById('react-footer'));
-    return ;
-}, 'text');
 
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
@@ -34,21 +17,28 @@ function collapseNavbar() {
     }
 }
 
-$(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);
+function render(json) {
+    var data = $.parseJSON(json);
+    var left = true;
 
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+    document.title = data.title + " - " + data.subtitle;
+
+    ReactDOM.render(<Navbar data={data.menu} />, document.getElementById('react-navbar'));
+    ReactDOM.render(<Header title={data.title} subtitle={data.subtitle} />, document.getElementById('react-header'));
+
+    $(data.sections).each(function(i, item) {
+        ReactDOM.render(<Section side={left ? "left" : "right"} data={item} />, document.getElementById('react-section-' + item.id));
+        left = !left;
     });
-});
 
-$('.navbar-collapse ul li a').click(function() {
-    $(".navbar-collapse").collapse('hide');
-});
+    ReactDOM.render(<Footer data={data.menu} copyright={data.copyright} powered={data.powered} />, document.getElementById('react-footer'));
+    return ;
+}
 
-//ReactDOM.render(<Maintenance />, document.getElementById('maintenance'));
+$(window).scroll(collapseNavbar);
+$(document).ready(function() {
+    $.get('../assets/' + (navigator.language || navigator.userLanguage) + '.json', render, 'text').fail(function () {
+        $.get('../assets/en.json', render, 'text');
+    });
+    collapseNavbar();
+});

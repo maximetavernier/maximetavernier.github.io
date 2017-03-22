@@ -1,26 +1,8 @@
 import React from "react";
-import $ from "jquery";
 
 import Li from './Navbar/Li';
 
 export default class Navbar extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            list: this.getNavbarMenu()
-        }
-    }
-
-    getNavbarMenu() {
-        return $.get('../assets/' + (navigator.language || navigator.userLanguage) + '.json', function(json) {
-            var menu = $.parseJSON(json).menu;
-            var list = menu.map((item) =>
-                <Li id={item.id} title={item.title} />
-            );
-            return list;
-        }, 'text');
-    }
-
     render() {
         return (
             <div className="container">
@@ -37,15 +19,9 @@ export default class Navbar extends React.Component {
                         <li className="hidden">
                             <a href="#react-header"></a>
                         </li>
-                        <li>
-                            <a className="page-scroll" href="#react-section-about">About</a>
-                        </li>
-                        <li>
-                            <a className="page-scroll" href="#react-section-portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a className="page-scroll" href="#react-section-activity">Activity</a>
-                        </li>
+                        {this.props.data.map((item) =>
+                            <Li key={item.id} id={item.id} title={item.title} />
+                        )}
                     </ul>
                 </div>
             </div>
