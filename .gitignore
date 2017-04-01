@@ -1,5 +1,4 @@
 .gitignore
-*.psd
 .idea
 #dist/
 node_modules/
