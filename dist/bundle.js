@@ -9494,7 +9494,6 @@ function render(json) {
     });
 
     _reactDom2.default.render(_react2.default.createElement(_Footer2.default, { data: data.menu, copyright: data.copyright, powered: data.powered }), document.getElementById('react-footer'));
-    return;
 }
 
 $(window).scroll(collapseNavbar);
@@ -9550,6 +9549,16 @@ var Footer = function (_React$Component) {
     _createClass(Footer, [{
         key: 'render',
         value: function render() {
+            var data = this.props.data;
+            var copyright = this.props.copyright;
+            var powered = this.props.powered;
+
+            var list = [];
+
+            data.map(function (item) {
+                list.push(_react2.default.createElement(_Separator2.default, null));
+                list.push(_react2.default.createElement(_Li2.default, { key: item.id, id: item.id, title: item.title }));
+            });
             return _react2.default.createElement(
                 'div',
                 { className: 'container' },
@@ -9565,20 +9574,17 @@ var Footer = function (_React$Component) {
                             'Home'
                         )
                     ),
-                    _react2.default.createElement(_Separator2.default, null),
-                    this.props.data.map(function (item) {
-                        return _react2.default.createElement(_Li2.default, { key: item.id, id: item.id, title: item.title });
-                    })
+                    list
                 ),
                 _react2.default.createElement(
                     'p',
                     { className: 'copyright text-muted small' },
-                    this.props.copyright
+                    copyright
                 ),
                 _react2.default.createElement(
                     'p',
                     { className: 'powered text-muted small' },
-                    this.props.powered
+                    powered
                 )
             );
         }
@@ -9627,13 +9633,17 @@ var Li = function (_React$Component) {
     _createClass(Li, [{
         key: "render",
         value: function render() {
+            var id = this.props.id;
+            var title = this.props.title;
+
+
             return _react2.default.createElement(
                 "li",
                 { className: "list-inline-item" },
                 _react2.default.createElement(
                     "a",
-                    { href: "#react-section-".concat(this.props.id) },
-                    this.props.title
+                    { href: "#react-section-" + id },
+                    title
                 )
             );
         }
@@ -9802,6 +9812,9 @@ var Navbar = function (_React$Component) {
     _createClass(Navbar, [{
         key: "render",
         value: function render() {
+            var data = this.props.data;
+
+
             return _react2.default.createElement(
                 "div",
                 { className: "container" },
@@ -9837,7 +9850,7 @@ var Navbar = function (_React$Component) {
                             { className: "hidden" },
                             _react2.default.createElement("a", { href: "#react-header" })
                         ),
-                        this.props.data.map(function (item) {
+                        data.map(function (item) {
                             return _react2.default.createElement(_Li2.default, { key: item.id, id: item.id, title: item.title });
                         })
                     )
@@ -9894,13 +9907,17 @@ var Li = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+            var id = this.props.id;
+            var title = this.props.title;
+
+
             return _react2.default.createElement(
                 'li',
                 null,
                 _react2.default.createElement(
                     'a',
-                    { className: 'page-scroll', onClick: this.collapse, href: "#react-section-".concat(this.props.id) },
-                    this.props.title
+                    { className: 'page-scroll', onClick: this.collapse, href: '#react-section-' + id },
+                    title
                 )
             );
         }
@@ -9949,6 +9966,10 @@ var Section = function (_React$Component) {
     _createClass(Section, [{
         key: "render",
         value: function render() {
+            var data = this.props.data;
+            var side = this.props.side;
+
+
             return _react2.default.createElement(
                 "div",
                 { className: "container" },
@@ -9957,27 +9978,27 @@ var Section = function (_React$Component) {
                     { className: "row" },
                     _react2.default.createElement(
                         "div",
-                        { className: "col-md-6 ".concat(this.props.side.localeCompare("right") == 0 ? "col-sm-7" : "col-sm-5") },
+                        { className: "col-md-6 " + (side.localeCompare("right") === 0 ? "col-sm-7" : "col-sm-5") },
                         _react2.default.createElement("hr", { className: "react-section-heading-spacer" }),
                         _react2.default.createElement("div", { className: "clearfix" }),
                         _react2.default.createElement(
                             "h2",
                             { className: "react-section-heading" },
-                            this.props.data.title
+                            data.title
                         ),
                         _react2.default.createElement(
                             "p",
                             { className: "lead justified" },
-                            this.props.data.descr
+                            data.descr
                         )
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "react-section-image-url col-md-6 ".concat(this.props.side.localeCompare("right") == 0 ? "col-sm-5" : "col-sm-7") },
+                        { className: "react-section-image-url col-md-6 " + (side.localeCompare("right") === 0 ? "col-sm-5" : "col-sm-7") },
                         _react2.default.createElement(
                             "a",
-                            { href: this.props.data.url },
-                            _react2.default.createElement("img", { className: "img-fluid", src: this.props.data.image, alt: "" })
+                            { href: data.url },
+                            _react2.default.createElement("img", { className: "img-fluid", src: data.image, alt: "" })
                         )
                     )
                 )

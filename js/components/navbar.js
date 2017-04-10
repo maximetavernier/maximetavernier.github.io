@@ -4,6 +4,8 @@ import Li from './Navbar/Li';
 
 export default class Navbar extends React.Component {
     render() {
+        const { data } = this.props;
+
         return (
             <div className="container">
                 <div className="navbar-header">
@@ -19,7 +21,7 @@ export default class Navbar extends React.Component {
                         <li className="hidden">
                             <a href="#react-header"></a>
                         </li>
-                        {this.props.data.map((item) =>
+                        {data.map((item) =>
                             <Li key={item.id} id={item.id} title={item.title} />
                         )}
                     </ul>

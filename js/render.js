@@ -15,8 +15,8 @@ function collapseNavbar() {
 }
 
 function render(json) {
-    var data = $.parseJSON(json);
-    var left = true;
+    let data = $.parseJSON(json);
+    let left = true;
 
     document.title = data.title + " - " + data.subtitle;
 
@@ -29,7 +29,6 @@ function render(json) {
     });
 
     ReactDOM.render(<Footer data={data.menu} copyright={data.copyright} powered={data.powered} />, document.getElementById('react-footer'));
-    return ;
 }
 
 $(window).scroll(collapseNavbar);

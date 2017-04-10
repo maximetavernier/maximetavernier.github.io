@@ -6,9 +6,12 @@ export default class Li extends React.Component {
     }
 
     render() {
+        const { id } = this.props;
+        const { title } = this.props;
+
         return (
             <li>
-                <a className="page-scroll" onClick={this.collapse} href={"#react-section-".concat(this.props.id)}>{this.props.title}</a>
+                <a className="page-scroll" onClick={this.collapse} href={`#react-section-${id}`}>{title}</a>
             </li>
         );
     }
