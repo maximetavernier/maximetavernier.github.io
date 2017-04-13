@@ -9901,7 +9901,7 @@ var Li = function (_React$Component) {
 
     _createClass(Li, [{
         key: 'collapse',
-        value: function collapse(event) {
+        value: function collapse() {
             $(".navbar-collapse").collapse('hide');
         }
     }, {
@@ -9997,7 +9997,7 @@ var Section = function (_React$Component) {
                         { className: "react-section-image-url col-md-6 " + (side.localeCompare("right") === 0 ? "col-sm-5" : "col-sm-7") },
                         _react2.default.createElement(
                             "a",
-                            { href: data.url },
+                            { href: data.url, target: "_blank" },
                             _react2.default.createElement("img", { className: "img-fluid", src: data.image, alt: "" })
                         )
                     )

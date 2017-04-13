@@ -15,7 +15,7 @@ export default class Section extends React.Component {
                         <p className="lead justified">{data.descr}</p>
                     </div>
                     <div className={`react-section-image-url col-md-6 ${side.localeCompare("right") === 0 ? "col-sm-5" : "col-sm-7"}`}>
-                        <a href={data.url}>
+                        <a href={data.url} target="_blank">
                             <img className="img-fluid" src={data.image} alt="" />
                         </a>
                     </div>

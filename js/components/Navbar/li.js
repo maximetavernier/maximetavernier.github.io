@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default class Li extends React.Component {
-    collapse(event) {
+    collapse() {
         $(".navbar-collapse").collapse('hide');
     }
 
