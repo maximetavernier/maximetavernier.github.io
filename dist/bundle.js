@@ -9997,7 +9997,7 @@ var Section = function (_React$Component) {
                         { className: "react-section-image-url col-md-6 " + (side.localeCompare("right") === 0 ? "col-sm-5" : "col-sm-7") },
                         _react2.default.createElement(
                             "a",
-                            { href: data.url, targer: data._blank === true ? "_blank" : "_self" },
+                            { href: data.url, target: data._blank ? "_blank" : "_self" },
                             _react2.default.createElement("img", { className: "img-fluid", src: data.image, alt: "" })
                         )
                     )
